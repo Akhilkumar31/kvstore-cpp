@@ -1,4 +1,0 @@
-/Users/akhilkumarpuri/Desktop/projects/kvstore-cpp/build/CMakeFiles/kvstore.dir
-/Users/akhilkumarpuri/Desktop/projects/kvstore-cpp/build/CMakeFiles/kvclient.dir
-/Users/akhilkumarpuri/Desktop/projects/kvstore-cpp/build/CMakeFiles/edit_cache.dir
-/Users/akhilkumarpuri/Desktop/projects/kvstore-cpp/build/CMakeFiles/rebuild_cache.dir
