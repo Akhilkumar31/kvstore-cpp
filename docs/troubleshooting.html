@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Troubleshooting — KVStore C++</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head><body>
+<nav class="nav">
+  <div class="container">
+    <a class="logo" href="index.html">KVStore C++</a>
+    <a class="link" href="features.html">Features</a>
+    <a class="link" href="protocol.html">Protocol</a>
+    <a class="link" href="benchmarks.html">Benchmarks</a>
+    <a class="link" href="docs.html">Docs</a>
+    <a class="link" href="troubleshooting.html">Troubleshooting</a>
+    <a class="link" href="about.html">About</a>
+    <span class="spacer"></span>
+    <a class="link" href="https://github.com/Akhilkumar31/kvstore-cpp" target="_blank">GitHub ↗</a>
+  </div>
+</nav>
+<main class="container">
+  <h1>Troubleshooting</h1>
+  <h3>Build fails (cmake/g++)</h3>
+  <ul>
+    <li>Install: <code>sudo apt-get install cmake g++ make</code></li>
+    <li>Ensure C++17: <code>set(CMAKE_CXX_STANDARD 17)</code> in CMakeLists.txt</li>
+  </ul>
+  <h3>Server starts but client cannot connect</h3>
+  <ul>
+    <li>Check host/port: run both on 127.0.0.1:6380 for local testing</li>
+    <li>Firewall might block ports — try localhost or different port</li>
+  </ul>
+  <h3>No data after restart</h3>
+  <ul>
+    <li>Verify AOF path is writable and not gitignored during tests</li>
+    <li>Check AOF replay logs; malformed lines should be skipped (not crash)</li>
+  </ul>
+  <h3>High CPU usage</h3>
+  <ul>
+    <li>Ensure server reads by newline; avoid busy loops (check recv return)</li>
+    <li>Build in Release (<code>-O2</code>) for realistic perf</li>
+  </ul>
+</main>
+<footer class="footer">
+  © 2025 Akhil Kumar Puri • <a href="https://github.com/Akhilkumar31/kvstore-cpp" target="_blank">GitHub</a>
+</footer>
+<script src="assets/script.js"></script>
+</body></html>

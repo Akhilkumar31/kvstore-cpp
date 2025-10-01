@@ -1,0 +1,1 @@
+/usr/bin/c++  -pthread -O2 -Wall -Wextra -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/kvstore.dir/src/main.cpp.o CMakeFiles/kvstore.dir/src/server.cpp.o CMakeFiles/kvstore.dir/src/store.cpp.o CMakeFiles/kvstore.dir/src/persistence.cpp.o CMakeFiles/kvstore.dir/src/util.cpp.o -o kvstore

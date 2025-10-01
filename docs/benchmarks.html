@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Benchmarks — KVStore C++</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head><body>
+<nav class="nav">
+  <div class="container">
+    <a class="logo" href="index.html">KVStore C++</a>
+    <a class="link" href="features.html">Features</a>
+    <a class="link" href="protocol.html">Protocol</a>
+    <a class="link" href="benchmarks.html">Benchmarks</a>
+    <a class="link" href="docs.html">Docs</a>
+    <a class="link" href="troubleshooting.html">Troubleshooting</a>
+    <a class="link" href="about.html">About</a>
+    <span class="spacer"></span>
+    <a class="link" href="https://github.com/Akhilkumar31/kvstore-cpp" target="_blank">GitHub ↗</a>
+  </div>
+</nav>
+<main class="container">
+  <h1>Benchmarks</h1>
+  <p>Use the included script:</p>
+  <pre>./scripts/bench.sh 20000</pre>
+  <p>Record results here (machine, build, single/multi-client). Example:</p>
+  <ul>
+    <li>MacBook Air M1, Release: ~30k ops/sec single client (SET+GET loop)</li>
+    <li>4 clients (xargs -P 4): ~75k ops/sec</li>
+  </ul>
+  <blockquote>Numbers vary by hardware and OS. Use them as rough reference, not absolute truth.</blockquote>
+</main>
+<footer class="footer">
+  © 2025 Akhil Kumar Puri • <a href="https://github.com/Akhilkumar31/kvstore-cpp" target="_blank">GitHub</a>
+</footer>
+<script src="assets/script.js"></script>
+</body></html>

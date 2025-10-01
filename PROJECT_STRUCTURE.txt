@@ -1,0 +1,45 @@
+PROJECT STRUCTURE — KV Store (C++)
+Generated: 2025-09-12 02:00:53
+
+Folder Tree:
+kvstore-cpp/
+  CMakeLists.txt
+  README.md
+  config.yaml
+include/
+  persistence.h
+  server.h
+  store.h
+  util.h
+scripts/
+  build.sh
+  demo.sh
+  run_server.sh
+src/
+  client.cpp
+  main.cpp
+  persistence.cpp
+  server.cpp
+  store.cpp
+  util.cpp
+
+File Descriptions:
+- CMakeLists.txt: CMake build configuration: defines kvstore and kvclient targets.
+- config.yaml: Runtime configuration (host/port/AOF path).
+- README.md: Quickstart instructions.
+- include/server.h: Server interface and configuration struct.
+- include/store.h: Thread-safe in-memory key-value map interface.
+- include/persistence.h: Append-only file (AOF) persistence interface.
+- include/util.h: Helpers for parsing and string utilities.
+- src/main.cpp: Entry point: loads config and runs server.
+- src/server.cpp: Networking, protocol handling, AOF integration.
+- src/store.cpp: Store implementation (GET/SET/DEL).
+- src/persistence.cpp: AOF append and replay implementation.
+- src/util.cpp: Utility function implementations.
+- src/client.cpp: Interactive CLI client for manual testing.
+- scripts/build.sh: Builds the project with CMake and Make.
+- scripts/run_server.sh: Starts the server using CONFIG_FILE or default config.yaml.
+- scripts/demo.sh: End-to-end demo: build, run, send commands, stop.
+
+AUDIT: All required files are present.
+NOTE: No unexpected files detected.

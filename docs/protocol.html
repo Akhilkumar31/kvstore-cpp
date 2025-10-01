@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Protocol — KVStore C++</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head><body>
+<nav class="nav">
+  <div class="container">
+    <a class="logo" href="index.html">KVStore C++</a>
+    <a class="link" href="features.html">Features</a>
+    <a class="link" href="protocol.html">Protocol</a>
+    <a class="link" href="benchmarks.html">Benchmarks</a>
+    <a class="link" href="docs.html">Docs</a>
+    <a class="link" href="troubleshooting.html">Troubleshooting</a>
+    <a class="link" href="about.html">About</a>
+    <span class="spacer"></span>
+    <a class="link" href="https://github.com/Akhilkumar31/kvstore-cpp" target="_blank">GitHub ↗</a>
+  </div>
+</nav>
+<main class="container">
+  <h1>Text Protocol</h1>
+  <table class="table">
+    <tr><th>Command</th><th>Response</th><th>Notes</th></tr>
+    <tr><td><code>PING</code></td><td><code>PONG</code></td><td>Health check</td></tr>
+    <tr><td><code>SET k v...</code></td><td><code>OK</code></td><td>Value is rest of line</td></tr>
+    <tr><td><code>GET k</code></td><td><code>$ value</code> or <code>(nil)</code></td><td>Returns value or nil</td></tr>
+    <tr><td><code>DEL k</code></td><td><code>OK</code> or <code>(nil)</code></td><td>nil if key absent</td></tr>
+  </table>
+
+  <h2>Examples</h2>
+  <pre>
+printf "PING\nGET foo\nSET foo bar\nGET foo\n" | ./build/kvclient 127.0.0.1 6380
+# PONG
+# (nil)
+# OK
+# $ bar
+  </pre>
+
+  <h2>Wire format (future)</h2>
+  <p class="small">Roadmap includes a binary framed protocol for speed and arbitrary data.</p>
+</main>
+<footer class="footer">
+  © 2025 Akhil Kumar Puri • <a href="https://github.com/Akhilkumar31/kvstore-cpp" target="_blank">GitHub</a>
+</footer>
+<script src="assets/script.js"></script>
+</body></html>

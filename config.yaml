@@ -1,0 +1,6 @@
+
+mode: "leader"
+host: "0.0.0.0"
+port: 6380
+aof_path: "data/appendonly.aof"
+max_clients: 256
