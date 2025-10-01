@@ -14,10 +14,12 @@
     <a class="link" href="docs.html">Docs</a>
     <a class="link" href="troubleshooting.html">Troubleshooting</a>
     <a class="link" href="about.html">About</a>
+    <a class="link" href="index.html#quickstart">Quickstart</a>
     <span class="spacer"></span>
     <a class="link" href="https://github.com/Akhilkumar31/kvstore-cpp" target="_blank">GitHub ↗</a>
   </div>
 </nav>
+
 <header class="hero">
   <div class="container">
     <h1>KVStore C++</h1>
@@ -31,24 +33,36 @@
 
 <main class="container">
   <div class="grid">
-    <div class="card"><h2>What it is</h2>
+    <div class="card">
+      <h2 id="what-it-is">What it is</h2>
       <p>Minimal server implementing <code>PING</code>, <code>SET</code>, <code>GET</code>, <code>DEL</code>.</p>
     </div>
-    <div class="card"><h2>Why it matters</h2>
+    <div class="card">
+      <h2 id="why-it-matters">Why it matters</h2>
       <p>Shows core systems concepts: networking, concurrency, durability.</p>
     </div>
-    <div class="card"><h2>Key features</h2>
-      <ul><li>C++17, POSIX sockets, threads</li><li>Append-only (AOF) + replay</li><li>Simple text protocol</li></ul>
+    <div class="card">
+      <h2 id="key-features">Key features</h2>
+      <ul>
+        <li>C++17, POSIX sockets, threads</li>
+        <li>Append-only (AOF) + replay</li>
+        <li>Simple text protocol</li>
+      </ul>
     </div>
-    <div class="card"><h2>Tech</h2>
-      <ul><li>CMake</li><li>mutex-guarded in-memory store</li><li>thread-per-connection</li></ul>
+    <div class="card">
+      <h2 id="tech">Tech</h2>
+      <ul>
+        <li>CMake</li>
+        <li>mutex-guarded in-memory store</li>
+        <li>thread-per-connection</li>
+      </ul>
     </div>
   </div>
 
-  <h2>Architecture at a glance</h2>
+  <h2 id="architecture">Architecture at a glance</h2>
   <img class="img" src="assets/architecture.svg" alt="Architecture Diagram">
 
-  <h2>Quick demo</h2>
+  <h2 id="quickstart">Quick demo</h2>
   <pre>
 # build
 ./scripts/build.sh

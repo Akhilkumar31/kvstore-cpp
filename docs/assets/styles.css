@@ -26,3 +26,5 @@ kbd{padding:2px 6px;border-radius:6px}
 blockquote{border-left:3px solid var(--accent);margin:8px 0;padding:8px 12px;color:#c8d4f8;background:#0e1730;border-radius:8px}
 hr{border:0;border-top:1px solid var(--line);margin:18px 0}
 .small{color:var(--muted);font-size:14px}
+:target { scroll-margin-top: 80px; }
+h2[id]  { scroll-margin-top: 80px; }
