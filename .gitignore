@@ -1,0 +1,26 @@
+# Build artifacts
+/build/
+/cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+*.o
+*.obj
+*.a
+*.lib
+*.dll
+*.so
+*.dylib
+
+# IDE/editor
+.vscode/
+.idea/
+*.user
+*.swp
+
+# Runtime data
+/data/
+*.aof
+*.log
+
+# OS junk
+.DS_Store
